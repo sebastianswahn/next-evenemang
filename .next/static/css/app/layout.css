@@ -781,6 +781,21 @@ video {
   .h-auto {
   height: auto;
 }
+  .h-\[35rem\] {
+  height: 35rem;
+}
+  .h-\[30rem\] {
+  height: 30rem;
+}
+  .h-\[26rem\] {
+  height: 26rem;
+}
+  .h-20 {
+  height: 5rem;
+}
+  .h-12 {
+  height: 3rem;
+}
   .max-h-\[54rem\] {
   max-height: 54rem;
 }
@@ -792,6 +807,9 @@ video {
 }
   .max-h-\[65rem\] {
   max-height: 65rem;
+}
+  .max-h-\[50rem\] {
+  max-height: 50rem;
 }
   .min-h-\[80px\] {
   min-height: 80px;
@@ -954,6 +972,9 @@ video {
 }
   .overflow-hidden {
   overflow: hidden;
+}
+  .overflow-scroll {
+  overflow: scroll;
 }
   .whitespace-nowrap {
   white-space: nowrap;

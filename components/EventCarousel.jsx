@@ -41,10 +41,10 @@ const EventCarousel = ({ events }) => {
         {events.map((event, index) => (
           <CarouselItem key={index}>
             <CardTitle className="py-6">
-              <span className="text-2xl">{event.name}</span>
+              <span className="text-3xl">{event.name}</span>
             </CardTitle>
 
-            <CardContent className="w-full h-2/5 max-h-[65rem]">
+            <CardContent className="w-full h-2/5 max-h-[50rem]">
               <img
                 src={event.image}
                 alt={event.name}
@@ -52,20 +52,17 @@ const EventCarousel = ({ events }) => {
               />
             </CardContent>
 
-            <Card className="mb-4 overflow-auto w-full h-auto flex flex-col justify-between items-stretch">
+            <Card className="mb-4 overflow-scroll w-full flex flex-col">
               <CardDescription className="p-2">
-                <span className="text-2xl">
-                  Den {event.date} kan du {event.description} i {event.location}{" "}
-                  det finns {event.seats} seats available
+                <span className="text-xl">
+                  Den {event.date} kan du {event.description} i {event.location}
+                  det finns {event.seats} platser kvar.
                 </span>
               </CardDescription>
-              <div className="flex text-center justify-center items-center bottom-0">
-                {" "}
-                <Link href={`/${event.id}`}>
-                  <Button>Mer info</Button>
-                </Link>
-              </div>
             </Card>
+            <Link href={`/${event.id}`}>
+              <Button>Mer info</Button>
+            </Link>
           </CarouselItem>
         ))}
       </CarouselContent>

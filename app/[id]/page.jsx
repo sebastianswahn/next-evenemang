@@ -80,33 +80,37 @@ function DetailPage() {
 
   return (
     <div className="flex flex-col text-center w-screen h-screen">
-      <div className="flex items-start justify-start mt-4 ml-4 gap-4 pb-8 w-full">
+      <div className="flex items-start h-12 justify-start mt-4 ml-4 gap-4 pb-8 w-full">
         <UserButton />
         <ModeToggle />
       </div>
 
-      <div className="flex justify-center h-full">
+      <div className="flex justify-center">
         {data ? (
           <div>
             <h1 className="pb-8 text-3xl">{data.name}</h1>
             <div className="flex justify-center">
-              <img className="rounded-md" src={data.image} alt={data.name} />
+              <img
+                className="rounded-md h-[26rem]"
+                src={data.image}
+                alt={data.name}
+              />
             </div>
             <p className="mt-4 mx-12">
-              Den {data.date} kan du {data.description} Det finns{" "}
+              Den {data.date} kan du {data.description} Det finns
               {availableSeats} platser kvar.
             </p>
             <div className="items-center text-center">
               {fullbooked ? (
                 <Button className="mx-4 mt-6" disabled>
-                  Fullbooked
+                  Fullbokat
                 </Button>
               ) : (
                 <Button
                   className="mx-4 mt-6"
                   onClick={() => handleUpdateEvent()}
                 >
-                  {isUserBooked ? "Unbook" : "Book here"}
+                  {isUserBooked ? "Avboka" : "Boka"}
                 </Button>
               )}
               <p className="mt-4">{message}</p>
