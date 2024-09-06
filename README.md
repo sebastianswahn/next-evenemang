@@ -1,1 +1,1 @@
-En enkel full-stack applikation gjord med next.js, firebase och clerk
+# Please see the finalized product you can find it under my repositories as a fork from miguel-apan. It was a collaboration project.
